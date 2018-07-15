@@ -5,7 +5,8 @@ import Showlist from '../Showlist';
 class Result extends Component {
     state = {
         value: '',
-        task: []
+        task: [],
+        done: false
     };
 
     handleChange = (event) => {
@@ -20,12 +21,20 @@ class Result extends Component {
         })
     };
 
+    handleDone = (event) => {
+        this.setState({
+            task: this.state.task.slice(event.target.value)
+        })
+
+    };
+
     render() {
-        const {value, task} = this.state;
+        const {value, task, done} = this.state;
         return (
             <div className="App">
                 <Todo value={value} task={task} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-                <Showlist task={task} value={value}/>
+                <Showlist task={task} value={value} done={done} handleDone={this.handleDone} />
+                {console.log(task)}
             </div>
         );
     }
