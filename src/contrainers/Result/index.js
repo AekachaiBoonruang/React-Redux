@@ -16,14 +16,20 @@ class Result extends Component {
     handleSubmit = event => {
         event.preventDefault();
         this.setState({
-            task: [...this.state.task, this.state.value
-            ]
+            task: [...this.state.task, {
+                id: new Date(),
+                value: this.state.value
+                }
+            ],
+            value: ''
         })
     };
 
-    handleDone = (event) => {
+    handleDone = (deleteId) => {
         this.setState({
-            task: this.state.task.slice(event.target.value)
+            task: this.state.task.filter((item) => {
+                 return item.id !== deleteId;
+            })
         })
 
     };
