@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-const StyledView = styled.p.attrs({
-    color: props => props.color,
-})`
+const StyledView = styled.p`
   color: ${props => props.color};
 `;
 
