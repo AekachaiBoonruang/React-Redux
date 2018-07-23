@@ -8,13 +8,12 @@ const StyledView = styled.p`
 class AppComponent extends Component {
 
     render() {
-        const color = this.props.color;
+        const {color, handleChange} = this.props;
         return (
             <div>
                 <StyledView color={color}>
-                    <input type="checkbox" onClick={this.props.handleChange}/> TestComponents
+                    <input type="checkbox" onClick={handleChange}/> TestComponents
                 </StyledView>
-                {console.log(color)}
             </div>
         );
     }
