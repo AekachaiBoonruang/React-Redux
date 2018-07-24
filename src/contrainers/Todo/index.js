@@ -1,13 +1,13 @@
 import React from 'react';
 import TodoComponent from '../../components/Todo'
 
-    function Todo(props) {
+    function Todo({value, task, handleChange, handleSubmit}) {
 
             return (
                 <div>
-                    <TodoComponent value={props.value} task={props.task}
-                                   handleChange={props.handleChange}
-                                   handleSubmit={props.handleSubmit}/>
+                    <TodoComponent value={value} task={task}
+                                   handleChange={handleChange}
+                                   handleSubmit={handleSubmit}/>
                 </div>
             );
         }

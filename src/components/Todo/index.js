@@ -1,14 +1,14 @@
 import React from 'react';
 
-function Todo(props) {
+function Todo({value, handleSubmit, handleChange}) {
     return (
         <div>
             <p> Todo list </p>
             <div>
-                <form onSubmit={props.handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <label>
                         Task :
-                        <input type="text" name="name"  value={props.value} onChange={props.handleChange}/>
+                        <input type="text" name="name"  value={value} onChange={handleChange}/>
                     </label>
                     <input type="submit" value="Submit" />
                 </form>

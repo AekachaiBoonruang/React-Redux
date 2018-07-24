@@ -40,7 +40,6 @@ class Result extends Component {
             <div className="App">
                 <Todo value={value} task={task} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
                 <Showlist task={task} value={value} done={done} handleDone={this.handleDone} />
-                {console.log(task)}
             </div>
         );
     }

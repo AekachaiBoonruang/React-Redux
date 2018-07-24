@@ -1,10 +1,9 @@
 import React from 'react';
 import ShowlistComponents from '../../components/Showlist'
 
-
-function Showlist(props) {
+function Showlist({task, done, handleDone}) {
     return (
-        <ShowlistComponents task={props.task} done={props.done} handleDone={props.handleDone}/>
+        <ShowlistComponents task={task} done={done} handleDone={handleDone}/>
     );
 }
 

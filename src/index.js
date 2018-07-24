@@ -1,20 +1,22 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import logger from 'redux-logger'
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
 import rootReducer from './reducers'
 import Score from './components/Score'
+import Expert from './components/Expert'
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 const MyApp = () => (
     <Provider store={store}>
         <Fragment>
             <App />
             <Score />
+            <Expert />
         </Fragment>
     </Provider>
 );
