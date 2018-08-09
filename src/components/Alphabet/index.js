@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import GridContainer from './GridContainer'
 import FlexContainer from './FlexContainer'
+import Meterail from './Material'
+import MeterailContainer from './MaterialContainer'
 
 class Alaphabettest extends Component {
 
@@ -15,6 +17,8 @@ class Alaphabettest extends Component {
             <div>
                 <GridContainer alphabet={alphabet} />
                 <FlexContainer alphabet={alphabet} />
+                <Meterail />
+                <MeterailContainer alphabet={alphabet} />
             </div>
         );
     }
