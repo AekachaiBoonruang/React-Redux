@@ -7,7 +7,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import rootReducer from './reducers'
 import Score from './components/Score'
-import Expert from './components/Expert'
+import Alaphabet from "./components/Alphabet/index";
 
 const store = createStore(rootReducer, applyMiddleware(logger));
 
@@ -16,7 +16,7 @@ const MyApp = () => (
         <Fragment>
             <App />
             <Score />
-            <Expert />
+            <Alaphabet />
         </Fragment>
     </Provider>
 );
